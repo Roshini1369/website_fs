@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Brand Watches</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-image: url('https://omaxwatches.in/cdn/shop/collections/erkek-2.jpg?v=1744699839&width=750');
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      
+      color: #fff; 
+      min-height: 100vh;
+      margin: 0;
+      padding-left: 220px; /* space for sidebar */
+    }
+    /* Sidebar Navigation */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 220px;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 1000;
+    }
+    .navbar .container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .navbar .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 3rem;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+    .navbar .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.5rem 0;
+      border-left: 4px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .navbar .nav-links li a:hover,
+    .navbar .nav-links li a:focus {
+      border-left-color: #f9a825;
+      padding-left: calc(0.5rem - 4px);
+    }
+
+    header {
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 3px;
+      color: #ed0d0d;
+    }
+    header p {
+      font-size: 1.1rem;
+      color:#1432ff;
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    
+    .watch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1100px;
+      margin-left:auto;
+      margin-right: auto;
+      margin-bottom: 3rem;
+    }
+    .watch-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      color: #222;
+    }
+    .watch-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+    .watch-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .watch-info {
+      padding: 1rem 1.5rem 1.5rem;
+    }
+    .watch-info h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .watch-info p {
+      font-size: 1rem;
+      color: #555;
+    }
+    
+    footer {
+      margin-top: 3rem;
+      color: #999;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        padding-left: 0;
+        padding: 1rem;
+      }
+      .navbar {
+        position: relative;
+        height: auto;
+        width: 100%;
+        flex-direction: row;
+        padding: 1rem 2rem;
+        box-shadow: none;
+        justify-content: space-between;
+      }
+      .navbar .container {
+        flex-direction: row;
+        align-items: center;
+      }
+      .navbar .nav-links {
+        flex-direction: row;
+        gap: 1rem;
+      }
+      .navbar .nav-links li a {
+        border-left: none;
+        padding-left: 0;
+      }
+      header, .watch-grid {
+        max-width: 100%;
+      }
+      .watch-card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">LuxTime</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#watches">Watches</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="home">
+    <h1><strong>LuxTime Watches</strong></h1>
+    <p>Elegant & Timeless Luxury Watches</p>
+  </header>
+  
+  <section id="watches" class="watch-grid">
+    <article class="watch-card">
+      <img src="download1.jpeg" alt="Classic Leather Watch" />
+      <div class="watch-info">
+        <h2>Classic Leather</h2>
+        <p>Timeless leather strap with stainless steel case for daily elegance.</p>
+      </div>
+    </article>
+    <article class="watch-card">
+      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Silver Chronograph" />
+      <div class="watch-info">
+        <h2>Silver Chronograph</h2>
+        <p>Sporty chronograph with sapphire crystal and precision timing.</p>
+      </div>
+    </article>
+    <article class="watch-card">
+      <img src="https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?auto=format&fit=crop&w=600&q=80" alt="Rose Gold Watch" />
+      <div class="watch-info">
+        <h2>Rose Gold Elegance</h2>
+        <p>Rose gold finish with mesh strap for a modern, classy look.</p>
+      </div>
+    </article>
+    <article class="watch-card">
+      <img src="download2.jpeg" alt="Minimalist Black Watch" />
+      <div class="watch-info">
+        <h2>Minimalist Black</h2>
+        <p>Sleek black dial and band, perfect for minimalist style lovers.</p>
+      </div>
+    </article>
+    <article class="watch-card">
+      <img src="download3.jpeg" alt="Rolex Watch" />
+      <div class="watch-info">
+        <h2>Rolex Watch</h2>
+        <p>A classic watch that is very premium.</p>
+      </div>
+    </article>
+    <article class="watch-card">
+      <img src="download4.jpeg" alt="Smart Watch" />
+      <div class="watch-info">
+        <h2>Smart Watch</h2>
+        <p>A digital watch that navigates our health.</p>
+      </div>
+    </article>
+  </section>
+
+  <section id="about" style="max-width: 1100px; margin: 0 auto 3rem; color: #fff;">
+    <h2>About LuxTime</h2>
+    <p>LuxTime Watches offers an exclusive collection of premium branded watches combining craftsmanship, style, and durability to suit every occasion.</p>
+  </section>
+
+  <section id="contact" style="max-width: 1100px; margin: 0 auto 3rem; color: #fff;">
+    <h2>Contact Us</h2>
+    <p>For inquiries and orders, please email us at <a href="mailto:contact@luxtime.com" style="color: #f9a825;">contact@luxtime.com</a>.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 LuxTime Watches. All rights reserved.
+  </footer>
+</body>
+</html>
